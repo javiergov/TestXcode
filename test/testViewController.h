@@ -10,6 +10,7 @@
 
 @interface testViewController : UIViewController {
     IBOutlet UILabel *hola;
+    IBOutlet UILabel *statusLabel;
     NSString *originalText;
 }
 @property (nonatomic,retain) NSString *originalText;

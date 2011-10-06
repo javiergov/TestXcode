@@ -29,6 +29,7 @@
 //    originalText = [NSString stringWithString:[hola text]];
     [self setOriginalText:[hola text]];
     NSLog(@"originalText: %@", originalText);
+    [statusLabel setText:@"aplicación Iniciada"];
     [super viewDidLoad];
 }
 
@@ -48,12 +49,15 @@
 }
 
 - (IBAction)ponerChao:(id)sender {
-
+    [statusLabel setText:@"se cambió el texto"];
+    
     [hola setText:@"chao"];
 
 }
 
 - (IBAction)resetDaLabel:(id)sender {
+    [statusLabel setText:@"estado inicial"];
+    
     NSLog(@"originalText: %@", originalText);
     [hola setText:originalText];
 }
