@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface testViewController : UIViewController
+@interface testViewController : UIViewController {
+    IBOutlet UILabel *hola;
+    NSString *originalText;
+}
+@property (nonatomic,retain) NSString *originalText;
+- (IBAction)ponerChao:(id)sender ;
+- (IBAction)resetDaLabel:(id)sender ;
 
 @end

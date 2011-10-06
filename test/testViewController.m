@@ -9,6 +9,7 @@
 #import "testViewController.h"
 
 @implementation testViewController
+@synthesize originalText;
 
 - (void)didReceiveMemoryWarning
 {
@@ -20,13 +21,17 @@
 
 #pragma mark - View lifecycle
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
+    NSLog(@"THE APP JUST LOADED");
+//    originalText = [NSString stringWithString:[hola text]];
+    [self setOriginalText:[hola text]];
+    NSLog(@"originalText: %@", originalText);
     [super viewDidLoad];
 }
-*/
+
 
 - (void)viewDidUnload
 {
@@ -38,7 +43,19 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+//    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
+}
+
+- (IBAction)ponerChao:(id)sender {
+
+    [hola setText:@"chao"];
+
+}
+
+- (IBAction)resetDaLabel:(id)sender {
+    NSLog(@"originalText: %@", originalText);
+    [hola setText:originalText];
 }
 
 @end
